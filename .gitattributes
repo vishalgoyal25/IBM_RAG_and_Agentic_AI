@@ -1,0 +1,30 @@
+# Normalize line endings: LF in the repo, native in the working tree.
+* text=auto
+
+*.py    text diff=python
+*.md    text
+*.txt   text
+*.yml   text
+*.yaml  text
+*.json  text
+*.toml  text
+
+*.ps1   text eol=crlf
+*.bat   text eol=crlf
+*.sh    text eol=lf
+
+# Binary — never diff or normalize
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.pdf   binary
+*.zip   binary
+*.faiss binary
+*.pkl   binary
+*.pt    binary
+*.pth   binary
+*.safetensors binary
+
+# Notebooks: treat as text but suppress noisy diffs
+*.ipynb text linguist-detectable=true

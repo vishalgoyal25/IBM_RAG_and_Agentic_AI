@@ -1,0 +1,15 @@
+# Recreate the project environment:
+#   conda env create --prefix ./myvenv --file environment.yml
+#   conda activate ./myvenv
+#
+# Python is pinned to 3.12 because CrewAI requires <3.13.
+name: myvenv
+
+channels:
+  - defaults
+
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -r requirements.txt

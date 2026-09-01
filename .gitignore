@@ -1,0 +1,95 @@
+# ---------- Environments ----------
+myvenv/
+myenv/
+.myenv
+venv/
+.venv/
+env/
+.conda/
+*.conda-lock
+
+# ---------- Secrets ----------
+.env
+.env.*
+!.env.example
+*.key
+secrets.toml
+.streamlit/secrets.toml
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+__*/
+
+# ---------- Notebooks ----------
+.ipynb_checkpoints/
+
+# ---------- Editors / OS ----------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+DS*
+DS*/
+.DS_*
+Thumbs.db
+
+# ---------- Vector stores / indexes ----------
+chroma/
+chroma_db/
+.chroma/
+*.chroma
+faiss_index/
+*.faiss
+*.index
+index_store/
+.lancedb/
+milvus_data/
+
+# ---------- Model / embedding caches ----------
+.cache/
+.vector_cache/
+models/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.gguf
+*.bin
+*.onnx
+*.pkl
+
+# ---------- Agent / framework state ----------
+.langgraph_api/
+.langchain/
+langgraph.db
+*.sqlite
+*.sqlite3
+*.db
+crew_memory/
+.crewai/
+.autogen/
+.beeai/
+
+# ---------- Scratch & uploads ----------
+# Course datasets (.csv, .txt, .json) live inside the module folders and ARE tracked.
+uploads/
+tmp/
+scratch/
+*.tar.gz
+
+# ---------- Logs ----------
+logs/
+*.log
+*.out
+
+# ---------- Personal notes ----------
+Git_cmd.txt
+Jobs.txt
