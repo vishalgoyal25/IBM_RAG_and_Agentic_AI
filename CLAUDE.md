@@ -66,6 +66,8 @@ Mirrors the previous certificate repo:
 ## Git
 
 - Do not commit or push unless asked.
+- **Never add a `Co-Authored-By:` trailer to commit messages.** Commit messages
+  are the message and nothing else.
 - Course materials (`.ipynb`, `.pdf`, `.png`, `.csv`, `.txt`, `.zip`) are meant
   to be tracked. If a `git add` skips one, the `.gitignore` is wrong — fix the
   rule rather than force-adding.

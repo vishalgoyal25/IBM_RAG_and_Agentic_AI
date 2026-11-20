@@ -90,6 +90,8 @@ logs/
 *.log
 *.out
 
-# ---------- Personal notes ----------
+# ---------- Personal notes / assistant config ----------
+CLAUDE.md
+.claude/
 Git_cmd.txt
 Jobs.txt
