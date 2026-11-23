@@ -1,4 +1,8 @@
-# ---------- Environments ----------
+# ==============================================================================
+# GitIgnore for Agentic AI, RAG & LLM Development
+# ==============================================================================
+
+# ---------- Virtual Environments ----------
 myvenv/
 myenv/
 .myenv
@@ -8,17 +12,19 @@ env/
 .conda/
 *.conda-lock
 
-# ---------- Secrets ----------
+# ---------- Secrets, API Keys & Credentials ----------
 .env
 .env.*
 !.env.example
 *.key
+*.pem
 secrets.toml
 .streamlit/secrets.toml
 
-# ---------- Python ----------
+# ---------- Python Runtime & Package Caches ----------
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
 build/
 dist/
@@ -27,10 +33,11 @@ dist/
 .ruff_cache/
 __*/
 
-# ---------- Notebooks ----------
+# ---------- Jupyter Notebooks ----------
 .ipynb_checkpoints/
+*-checkpoint.ipynb
 
-# ---------- Editors / OS ----------
+# ---------- Editors, OS & IDEs ----------
 .vscode/
 .idea/
 *.swp
@@ -39,8 +46,9 @@ DS*
 DS*/
 .DS_*
 Thumbs.db
+ehthumbs.db
 
-# ---------- Vector stores / indexes ----------
+# ---------- Vector Stores & Search Indexes (RAG) ----------
 chroma/
 chroma_db/
 .chroma/
@@ -50,11 +58,73 @@ faiss_index/
 *.index
 index_store/
 .lancedb/
+*.lance
 milvus_data/
+qdrant_storage/
+qdrant_data/
+.qdrant/
+weaviate_data/
+.weaviate/
+bm25_index/
+*.bm25
 
-# ---------- Model / embedding caches ----------
+# ---------- Agent Frameworks, Memory & Orchestration ----------
+.langgraph_api/
+.langchain/
+.langchain_cache/
+langgraph.db
+crew_memory/
+.crewai/
+.autogen/
+.autogenstudio/
+autogen_workspace/
+.beeai/
+.llama_index/
+storage/
+storage_index/
+.smolagents/
+.mem0/
+mem0_data/
+
+# ---------- SQLite Databases & Write-Ahead Logs (Agent Memory) ----------
+*.sqlite
+*.sqlite3
+*.db
+*.duckdb
+*.ddb
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3-shm
+*.sqlite3-wal
+*.db-shm
+*.db-wal
+
+# ---------- Observability, Tracing & Evaluation (LLMOps) ----------
+wandb/
+.wandb/
+mlruns/
+mlartifacts/
+phoenix/
+phoenix_data/
+.arize/
+trulens.db
+default.sqlite
+.trulens/
+.ragas/
+ragas_cache/
+.deepeval/
+.agentops/
+agent_runs/
+traces/
+
+# ---------- Model Weights, Embeddings & Framework Caches ----------
 .cache/
 .vector_cache/
+.huggingface/
+hf_cache/
+hub/
+models--*/
+.ollama/
 models/
 checkpoints/
 *.pt
@@ -65,33 +135,35 @@ checkpoints/
 *.bin
 *.onnx
 *.pkl
+*.joblib
+*.engine
 
-# ---------- Agent / framework state ----------
-.langgraph_api/
-.langchain/
-langgraph.db
-*.sqlite
-*.sqlite3
-*.db
-crew_memory/
-.crewai/
-.autogen/
-.beeai/
+# ---------- Browser Automation & Tool Execution Sandboxes ----------
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+browser_downloads/
 
-# ---------- Scratch & uploads ----------
+# ---------- Scratch, Temporary Files & Large Embeddings ----------
 # Course datasets (.csv, .txt, .json) live inside the module folders and ARE tracked.
 uploads/
 tmp/
 scratch/
 *.tar.gz
+*.parquet
 
 # ---------- Logs ----------
 logs/
 *.log
 *.out
 
-# ---------- Personal notes / assistant config ----------
+# ---------- AI Coding Assistants & Personal Configs ----------
 CLAUDE.md
 .claude/
+.gemini/
+.cursor/
+.aider*
+.continue/
 Git_cmd.txt
 Jobs.txt
